@@ -321,7 +321,7 @@ async function heapSort() {
 //-------------------------------------------------------------------
 let initialArray = [35, 20, 10, 50, 40, 5, 25];
 let frequency = 200;  
-let length=17;                  
+let length=14;                  
 const containerIds = [
     'array-container1', 'array-container2', 'array-container3',
     'array-container4', 'array-container5', 'array-container6'
