@@ -409,6 +409,39 @@ speed.addEventListener('input', () => {
 });
 
 
+document.getElementById('sort-all').addEventListener('click', async () => {
+
+    createAllBars();
+    const button = document.getElementById('sort-btn');
+    const volumeSlider = document.getElementById('volume');
+    const speed = document.getElementById('speed');
+    const newarr = document.getElementById('newarr');
+    const sortall = document.getElementById('sort-all');
+    
+    // Disable buttons
+    button.disabled = true;
+    sortall.disabled = true;
+    speed.disabled = true;
+    volumeSlider.disabled = true;
+    newarr.disabled = true;
+
+    // Wait for all sorting algorithms to complete
+    await Promise.all([
+        bubbleSort(),
+        selectionSort(),
+        insertionSort(),
+        mergeSort(),
+        quickSort(),
+        heapSort()
+    ]);
+
+    // Re-enable buttons after sorting is done
+    button.disabled = false;
+    newarr.disabled = false;
+    volumeSlider.disabled = false;
+    speed.disabled = false;
+    sortall.disabled = false;
+});
 
 
 
