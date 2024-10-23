@@ -360,7 +360,9 @@ document.getElementById('sort-btn').addEventListener('click', async () => {
     const volumeSlider = document.getElementById('volume');
     const speed = document.getElementById('speed');
     const newarr = document.getElementById('newarr');
+    const sortall = document.getElementById('sort-all');
     button.disabled = true;
+    sortall.disabled = true;
     speed.disabled = true;
     volumeSlider.disabled = true;
     newarr.disabled = true;
@@ -374,6 +376,7 @@ document.getElementById('sort-btn').addEventListener('click', async () => {
     newarr.disabled = false;
     volumeSlider.disabled = false;
     speed.disabled = false;
+    sortall.disabled = false;
 
 });
 
